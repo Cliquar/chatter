@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 header">
+      <h1 class="main-title">Chatter</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="chat-window col-xs-8">
+        
+    </div>
+    <div class="col-xs-4 show-users-window">
+    </div>
+    
+  </div>
+    <div class="col-xs-12">    
+      <%= render '/messages/form' %>
+    </div>
+  </div>
+</div>
+
+<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>

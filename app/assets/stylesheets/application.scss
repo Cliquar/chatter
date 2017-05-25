@@ -1,0 +1,89 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap";
+
+
+* {
+  margin: 0;
+}
+
+body {
+  margin: 0 auto;
+  background-color: #8cd4ff;
+}
+
+/* Styling, Coloring */
+.show-users-window{
+  background-color: #c4f8ff;
+}
+
+.chat-window {
+  background-color: #e0fbff;
+}
+
+.header {
+  background-color: #20a8fb;
+  width: 100%;
+}
+
+/* Positioning/Seizing */
+.main-title{
+  padding: 20px;
+}
+
+.chat-window {
+  height: 600px;
+  width: 70%;
+  padding: 20px;
+}
+
+.show-users-window {
+  height: 600px;
+  width: 30%;
+}
+
+.message-content {
+  padding-left: 5px;
+}
+
+.field {
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  width: 720px;
+}
+
+/* Fonts and Typo */
+.main-title {
+  font-family: 'Carter One', cursive;
+  font-size: 5em;
+  color: #fff48c;
+}
+
+.chat-window {
+  font-size: 1em;
+  font-family: 'Droid sans', Arial, sans-serif;
+}
+
+.message-user {
+  font-weight: bold;
+}
