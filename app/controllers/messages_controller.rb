@@ -28,8 +28,8 @@ class MessagesController < ApplicationController
     @message.user_id = current_user.id
     respond_to do |format|
       if @message.save
-        ActionCable.server.broadcast 'chat_channel', message: @message.content, username: current_user.email
-        format.html { redirect_to path_to_root, notice: 'Message was successfully created.' }
+        ActionCable.server.broadcast 'chat_channel', message: @message.content, username: current_user.email, sendnomsg: false
+        format.html { redirect_to 'root', notice: 'Message was successfully created.' }
         format.json { render :show, status: :created, location: @message }
       else
         format.html { render :new }

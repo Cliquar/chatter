@@ -5,11 +5,28 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row chat-container">
     <div class="chat-window col-xs-8">
-        
+        <% @messages = Message.all %>
+        <% @messages.each do |m| %>
+          <% user = User.find(m.user_id) %>
+          <div class="row">
+            <div class="col-xs-8 message-user"><%= user.email %>: </div>
+            <div class="col-xs-4 message-content"><%= m.content %></div>
+          </div>
+        <% end %>
     </div>
-    <div class="col-xs-4 show-users-window">
+    <div class="col-xs-3 show-users-window">
+      
+      <% if @users %>
+        <% @users.each do |user| %>
+          <% if user.online %>
+            <div class="col-xs-12 user_<%= user.id %>"><%= user.email %></div>
+          <% else %>
+            <div class="col-xs-12 user_<%= user.id %> hidden"><%= user.email %></div>
+          <% end %>
+        <% end %>
+      <% end %>
     </div>
     
   </div>
