@@ -29,7 +29,7 @@ class MessagesController < ApplicationController
     respond_to do |format|
       if @message.save
         ActionCable.server.broadcast 'chat_channel', message: @message.content, username: current_user.email, sendnomsg: false
-        format.html { redirect_to 'root', notice: 'Message was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Message was successfully created.' }
         format.json { render :show, status: :created, location: @message }
       else
         format.html { render :new }
