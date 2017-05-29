@@ -38,6 +38,14 @@ body {
 .header {
   background-color: #20a8fb;
   width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.login-form {
+  background-color: white;
+  width: 220px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* Positioning/Seizing */
